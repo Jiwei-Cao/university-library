@@ -1,6 +1,6 @@
 import React from "react";
 
-interface Props<T extends FieldValues>
+// interface Props<T extends FieldValues>
 
 const AuthForm = ({ type, schema, defaultValues, onSubmit }: Props) => {
     return (
