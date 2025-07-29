@@ -8,6 +8,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import Link from "next/link";
 import { FIELD_NAMES } from "@/constants";
+import ImageUpload from "./ImageUpload";
 
 interface Props<T extends FieldValues> {
     schema: ZodType<T>;
@@ -51,7 +52,11 @@ const AuthForm = <T extends FieldValues>({ type, schema, defaultValues, onSubmit
                                     {FIELD_NAMES[field.name as keyof typeof FIELD_NAMES]}
                                 </FormLabel>
                                 <FormControl>
-                                    <Input placeholder="shadcn" {...field} />
+                                    {field.name === "universityCard" ? (
+                                        <ImageUpload />
+                                    ) : (
+                                        <Input placeholder="shadcn" {...field} />
+                                    )}
                                 </FormControl>
                                 <FormDescription>
                                     This is your public display name.
