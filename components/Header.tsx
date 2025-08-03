@@ -5,8 +5,9 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Session } from "next-auth";
 
-const Header = () => {
+const Header = ({ session }: { session: Session} ) => {
     const pathname = usePathname()
 
     return (
@@ -24,8 +25,7 @@ const Header = () => {
                 <li>
                     <Link href="/my-profile">
                         <Avatar>
-                            <AvatarImage src="https://github.com/shadcn.png" />
-                            <AvatarFallback>CN</AvatarFallback>
+                            <AvatarFallback className="text-white">{session?.user?.name}</AvatarFallback>
                         </Avatar>
                     </Link>
                 </li>
