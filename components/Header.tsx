@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils"
+import { cn, getInitials } from "@/lib/utils"
 import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Session } from "next-auth";
@@ -25,7 +25,7 @@ const Header = ({ session }: { session: Session} ) => {
                 <li>
                     <Link href="/my-profile">
                         <Avatar>
-                            <AvatarFallback className="text-white">{session?.user?.name}</AvatarFallback>
+                            <AvatarFallback className="bg-amber-100">{getInitials(session?.user?.name || "IN")}</AvatarFallback>
                         </Avatar>
                     </Link>
                 </li>
