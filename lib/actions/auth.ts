@@ -57,7 +57,7 @@ export const signUp = async (params: AuthCredentials) => {
     try {
         await db.insert(users).values({fullName, email, universityId, password: hashedPassword, universityCard});
         await workflowClient.trigger({
-            url: `${config.env.prodApiEndpoint}/api/workflow/onboarding`,
+            url: `${config.env.prodApiEndpoint}/api/workflows/onboarding`,
             body: {
                 email, 
                 fullName,
