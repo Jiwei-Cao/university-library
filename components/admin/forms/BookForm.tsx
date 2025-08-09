@@ -6,12 +6,8 @@ import { z } from "zod"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import Link from "next/link";
-import { FIELD_NAMES, FIELD_TYPES } from "@/constants";
 import { useRouter } from "next/navigation";
-import { toast } from "sonner";
-import ImageUpload from "@/components/ImageUpload";
-import Book from "@/types"
+import { Book } from "@/types.d.ts"
 import { bookSchema } from "@/lib/validations";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -58,6 +54,7 @@ const BookForm = ({ type, ...book }: Props) => {
                             </FormItem>
                         )}
                     />
+
                     <FormField
                         control={form.control}
                         name={"author"}
@@ -73,6 +70,7 @@ const BookForm = ({ type, ...book }: Props) => {
                             </FormItem>
                         )}
                     />
+
                     <FormField
                         control={form.control}
                         name={"genre"}
@@ -88,6 +86,7 @@ const BookForm = ({ type, ...book }: Props) => {
                             </FormItem>
                         )}
                     />
+
                     <FormField
                         control={form.control}
                         name={"rating"}
@@ -103,6 +102,7 @@ const BookForm = ({ type, ...book }: Props) => {
                             </FormItem>
                         )}
                     />
+
                     <FormField
                         control={form.control}
                         name={"totalCopies"}
@@ -118,6 +118,7 @@ const BookForm = ({ type, ...book }: Props) => {
                             </FormItem>
                         )}
                     />
+
                     <FormField
                         control={form.control}
                         name={"coverUrl"}
@@ -133,6 +134,7 @@ const BookForm = ({ type, ...book }: Props) => {
                             </FormItem>
                         )}
                     />
+
                     <FormField
                         control={form.control}
                         name={"coverColor"}
@@ -148,6 +150,7 @@ const BookForm = ({ type, ...book }: Props) => {
                             </FormItem>
                         )}
                     />
+
                     <FormField
                         control={form.control}
                         name={"description"}
@@ -163,6 +166,7 @@ const BookForm = ({ type, ...book }: Props) => {
                             </FormItem>
                         )}
                     />
+                    
                     <FormField
                         control={form.control}
                         name={"videoUrl"}
@@ -171,13 +175,14 @@ const BookForm = ({ type, ...book }: Props) => {
                                 <FormLabel className="text-base font-normal text-dark-500">
                                     Book Trailer
                                 </FormLabel>
-                                <FormControl>
-                                    {/* File Upload */}
-                                </FormControl>
+                                    <FormControl>
+                                        {/* File Upload */}
+                                    </FormControl>
                                 <FormMessage />
                             </FormItem>
                         )}
                     />
+
                     <FormField
                         control={form.control}
                         name={"summary"}
