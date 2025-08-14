@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 University Library Management System - Tech Stack Analysis
+A full-stack University Library Management System built with Next.js, TypeScript, and PostgreSQL.  
+Features include user registration with university ID, book catalog browsing, borrowing system,  
+role-based access for admins, and responsive UI. Uses Redis caching, rate limiting, and ImageKit for media.
 
-## Getting Started
+## 🛠 Built With
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)  
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)  
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)  
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)  
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)  
+[![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io/)  
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)  
+[![ImageKit](https://img.shields.io/badge/ImageKit-18A999?style=for-the-badge&logo=imagekit&logoColor=white)](https://imagekit.io/)  
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🖥 Core Framework & Runtime
+- **Next.js 15.1.2** – React framework with App Router  
+- **React 19.0.0** – UI library  
+- **TypeScript 5** – Type-safe JavaScript  
+- **Node.js** – JavaScript runtime
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🗄 Database & ORM
+- **PostgreSQL (Neon Database)** – Primary database  
+- **Drizzle ORM 0.38.4** – TypeScript ORM  
+- **Redis (Upstash)** – Caching and rate limiting  
+- **Drizzle Kit** – Database migrations and management
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔐 Authentication & Security
+- **NextAuth.js v5** – Authentication solution  
+- **bcryptjs** – Password hashing  
+- **Upstash Ratelimit** – Rate limiting protection
 
-## Learn More
+## 🎨 UI & Styling
+- **Tailwind CSS 3.4.17** – Utility-first CSS framework  
+- **Radix UI** – Headless UI components (Avatar, Label, Toast, etc.)  
+- **shadcn/ui** – Component library built on Radix UI  
+- **Lucide React** – Icon library  
+- **React Hook Form 7.61** – Form management  
+- **Zod 3.25** – Schema validation  
+- **Sonner** – Toast notifications  
+- **next-themes** – Dark mode support
 
-To learn more about Next.js, take a look at the following resources:
+## 🖼 File Storage & Media
+- **ImageKit** – Image optimization and delivery CDN  
+- **imagekitio-next** – Next.js integration for ImageKit
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠 Development Tools
+- **ESLint** – Code linting  
+- **Prettier** – Code formatting  
+- **PostCSS** – CSS processing  
+- **Autoprefixer** – CSS vendor prefixing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧪 Key Features
+1. **User Management** – Registration and authentication with university ID  
+2. **Book Catalog** – Browse, search, and view book details  
+3. **Admin Panel** – Manage books, users, and library operations  
+4. **Borrowing System** – Track book loans and returns  
+5. **Role-based Access** – User and Admin roles  
+6. **Rate Limiting** – API protection  
+7. **Responsive Design** – Mobile-friendly interface
